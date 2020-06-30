@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="practicedatasets",
-    version="0.5",
+    version="0.7",
     description="Practice Dataset",
     long_description="This package contains different datasets like covid and world population. These datasets can be imported and acccessed as pandas dataframe or numpy array",
     long_description_content_type="text/x-rst",
