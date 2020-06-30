@@ -20,16 +20,7 @@ class CovidDataset:
     def GetCovidRawDataFrame(self):
         basePath = os.path.dirname(os.path.abspath(__file__))
         # Load the csv file in a pandas dataframe
-        columnHeaders = [
-            "Region",
-            "Location",
-            "Lat",
-            "Long",
-            "Date",
-            "Confirmed",
-            "Deaths",
-            "Recovered",
-        ]
+        columnHeaders = ["Region", "Location", "Lat", "Long", "Date", "Confirmed", "Deaths", "Recovered", "Active", "Continent"]
         columnTypes = {
             "Region": "str",
             "Location": "str",
@@ -39,6 +30,8 @@ class CovidDataset:
             "Confirmed": "int64",
             "Deaths": "int64",
             "Recovered": "int64",
+            "Active": "int64",
+            "Continent": "str",
         }
         parse_dates = ["Date"]
         dataFilePath = basePath + "/data/covid_19_clean_complete.csv"
